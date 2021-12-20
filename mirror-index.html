@@ -21,6 +21,9 @@
       <p id="num">抽選番号が表示されます</p>
     </div>
 
+    <img id="connect-images" src="一枚目の画像URL" data-second-image="二枚目の画像URL" data-third-image="三枚目の画像URL" data-forth-image="四枚目の画像URL">
+    <input type="button" value="ボタン" onclick="connector()">
+
     <script>
         const inputText = document.getElementById('input-text');
         const button = document.getElementById('button');
@@ -30,9 +33,27 @@
             button.disabled = false;
           }
         })
+        
         document.getElementById("text-button").onclick = function() {
          document.getElementById("num").innerHTML = Math.floor(Math.random() * 10);
         };
+        
+        var notc = 0;
+        var cnt = document.getElementById("connect-images");
+        var dftc = cnt.src;
+        function connector(){
+          notc++;
+          switch(4 - notc){
+            case 3: cnt.src = cnt.dataset.secondImage;
+            break;
+            case 2: cnt.src = cnt.dataset.thirdImage;
+            break;
+            case 1: cnt.src = cnt.dataset.forthImage;
+            break;
+            case 0: cnt.src = dftc; notc = 0;
+            break;
+          }
+        }
     </script>
 </body>
 </html>
