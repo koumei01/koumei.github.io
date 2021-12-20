@@ -16,7 +16,10 @@
         <button type="submit" id="button" disabled>送信</button>
     </form>
 
-    <div id="text-button"><p id="text">クリック</p></div>
+    <div id="text-button">
+      <p id="text">クリック</p>
+      <p id="num">抽選番号が表示されます</p>
+    </div>
 
     <script>
         const inputText = document.getElementById('input-text');
@@ -28,7 +31,7 @@
           }
         })
         document.getElementById("text-button").onclick = function() {
-         document.getElementById("text").innerHTML = Math.floor(Math.random() * 10);
+         document.getElementById("num").innerHTML = Math.floor(Math.random() * 10);
         };
     </script>
 </body>
