@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progateを参考に作成</title>
+</head>
+<body>
+    <p>石鹸5個セット</p>
+    <p>800円</p>
+    <input type="submit" value="購入する">
+    <form id="form" action="#">
+        <input type="text" id="input-text" placeholder="5文字以上入力してください">
+        <button type="submit" id="button" disabled>送信</button>
+    </form>
+    <script>
+        const inputText = document.getElementById('input-text');
+        const button = document.getElementById('button');
+        inputText.addEventListener('keyup', (e) => {
+          if (5 <= e.target.value.length) {
+            //入力された文字が5文字以上なら実行される
+            button.disabled = false;
+          }
+        })
+    </script>
+</body>
+</html>
