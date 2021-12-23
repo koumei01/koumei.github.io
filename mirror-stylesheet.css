@@ -8,5 +8,10 @@
 
 img {
   border-radius: 50%;
-  cursor: pointer:
+  cursor: pointer;
+  transition: border-radius .5s;
+}
+
+.changed {
+  border-radius: 0;
 }
