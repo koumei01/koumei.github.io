@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="mirror-stylesheet.css">
 </head>
 <body>
-    <p>石鹸5個セット</p>
+    <p id="target">石鹸5個セット</p>
     <p>800円</p>
     <!--ボタンを追加するタグ-->
     <input type="submit" value="購入する">
@@ -65,7 +65,10 @@
             break;
           }
         }
-
+      
+      function process() {
+        document.getElementById('target')
+      }
       document.getElementById('trigger').addEventListener('click', process);
     </script>
 </body>
