@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <!--コメント-->
 <head>
+  <!--フォントの指定-->
   <meta charset="utf-8">
+  <!--表示ウィンドウの基準サイズの定義-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Progateを参考に作成</title>
+  <!--Font Awesomeはアイコンを組み込むサービス。relはファイルとの関係性の宣言。Awesomeはスタイルシートです！ということ。integrityは外部リソースの整合性を確認する属性とのこと。-->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <!--参照するスタイルシートとその場所-->
   <link rel="stylesheet" type="text/css" href="mirror-stylesheet.css">
 </head>
 <body>
     <p>石鹸5個セット</p>
     <p>800円</p>
+    <!--ボタンを追加するタグ-->
     <input type="submit" value="購入する">
     <form id="form" action="#">
         <input type="text" id="input-text" placeholder="5文字以上入力してください">
@@ -26,8 +32,10 @@
     <input type="button" value="ボタン" onclick="connector()">
     <img id="connect-images" src="top.png" data-second-image="sushi.jfif" data-third-image="niku.jfif" data-forth-image="guratan.jfif">
 
+    <img src="sushi.jfif" alt="寿司です" id="trigger">
 
     <script>
+      'use script';
         const inputText = document.getElementById('input-text');
         const button = document.getElementById('button');
         inputText.addEventListener('keyup', (e) => {
@@ -57,6 +65,8 @@
             break;
           }
         }
+
+      document.getElementById('trigger').addEventListener('click', process);
     </script>
 </body>
 </html>
