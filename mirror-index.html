@@ -36,12 +36,14 @@
     <div id="text-button">
       <p id="num">抽選番号が表示されます</p>
     </div>
-
-    <input type="button" value="ボタン" onclick="connector()">
-    <img id="connect-images" src="top.png" data-second-image="sushi.jfif" data-third-image="niku.jfif" data-forth-image="guratan.jfif">
-
+    <!--ボタンの表示。クリック回数に合わせて画像が変化-->
+    <p><input type="button" value="ボタン" onclick="connector()"></p>
+    <p><img id="connect-images" src="top.png" data-second-image="sushi.jfif" data-third-image="niku.jfif" data-forth-image="guratan.jfif"></p>
+    
+      <!--クリックすると画像の角丸が取れる-->
     <img src="sushi.jfif" alt="寿司です" id="trigger">
 
+    <!--ここからjavascript-->
     <script>
       //document.wtite("JavaScriptはONです");
 
@@ -88,15 +90,13 @@
       alert( "円周率は¥n" + 3.14159 );  //文字列を改行させる
 
       var n;
-
-n = 1;
-document.write( n + "<br>" );  //結果は1
-
-n = n + 2;
-document.write( n + "<br>" );  //結果は3
-
-n++;
-document.write( n + "<br>" );  //結果は4
+      n = 1;
+      document.write( n + "<br>" );  //結果は1
+      n = n + 2;
+      document.write( n + "<br>" );  //結果は3
+      n++;
+      document.write( n + "<br>" );  //結果は4
+    
     </script>
     <!--<noscript>JavaScriptはOFFです</noscript>-->
 </body>
