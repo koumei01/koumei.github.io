@@ -95,6 +95,22 @@
       document.write( n + "<br>" );  //結果は3
       n++;
       document.write( n + "<br>" );  //結果は4
+
+      var num1 = 1;  //関数の外で宣言したグローバル変数
+
+function fnc1()
+{
+  var num2 = 1;  //関数内で宣言したローカル変数
+  num1++;
+  alert( "num1は" + num1 );
+  alert( "num2は" + num2 );
+}
+
+function fnc2()
+{
+  alert( "num1は" + num1 );
+  alert( "num2は" + num2 ); //エラーになり表示されない
+}
     
     </script>
     <!--<noscript>JavaScriptはOFFです</noscript>-->
