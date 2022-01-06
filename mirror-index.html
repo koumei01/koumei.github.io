@@ -47,6 +47,21 @@
     <script>
       //document.wtite("JavaScriptはONです");
 
+      var yobi = new Array();
+
+      yobi[0] = "日曜日";
+      yobi[1] = "月曜日";
+      yobi[2] = "火曜日";
+      yobi[3] = "水曜日";
+      yobi[4] = "木曜日";
+      yobi[5] = "金曜日";
+      yobi[6] = "土曜日";
+
+      var today = new Date();
+      var week = today.getDay();
+
+      alert("今日は"+yobi[week]+"です！");
+
       alert("こんにちは");  //文字列の表示
       
         const inputText = document.getElementById('input-text');
