@@ -47,8 +47,9 @@
     <script>
       //document.wtite("JavaScriptはONです");
 
+      //yobiという配列の宣言
       var yobi = new Array();
-
+      //0から始まる配列に対応する曜日名の指定
       yobi[0] = "日曜日";
       yobi[1] = "月曜日";
       yobi[2] = "火曜日";
@@ -56,10 +57,11 @@
       yobi[4] = "木曜日";
       yobi[5] = "金曜日";
       yobi[6] = "土曜日";
-
+      //本日の日付を変数todayに代入
       var today = new Date();
+      //todayの中から曜日データの数値だけを取り出す
       var week = today.getDay();
-
+      //配列yobiに本日の曜日の数値を当てはめた文字列の表示
       alert("今日は"+yobi[week]+"です！");
 
       alert("こんにちは");  //文字列の表示
