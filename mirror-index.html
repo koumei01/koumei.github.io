@@ -123,6 +123,22 @@
 
       if(num1 < 3){alert("3より小さいです");}
       else{alert("3より大きいです");}
+
+      var river = new Array(
+"日本の川の長さランキング",
+"信濃川",
+"利根川",
+"石狩川",
+"天塩川",
+"北上川"
+);
+
+document.write("<table>");
+for ( var i = 1 ; i <= 5 ; i++ ){
+  document.write("<tr><td>" + i + "位</td><td>" + river[i] + "</td></tr>")
+}
+document.write("</table>");
+
     </script>
     <!--<noscript>JavaScriptはOFFです</noscript>-->
 </body>
