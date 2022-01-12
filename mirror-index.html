@@ -103,35 +103,28 @@
       }
       document.getElementById('trigger').addEventListener('click', process);
 
-      alert( "円周率は¥n" + 3.14159 );  //文字列を改行させる
+      alert( "円周率は" + 3.14159 );  //文字列を改行させる
 
-      var n;
-      n = 1;
-      document.write( n + "<br>" );  //結果は1
-      n = n + 2;
-      document.write( n + "<br>" );  //結果は3
-      n++;
-      document.write( n + "<br>" );  //結果は4
 
       var num1 = 5;
       var num2 = 12;
       var num3 = num1 * num2;
-
       if(num3 <= 50){alert("50以下です");}
       if(num3 == 50){alert("50です");}
       if(num3 >= 50){alert("50以上です");}
 
       if(num1 < 3){alert("3より小さいです");}
       else{alert("3より大きいです");}
-
+      
+      //配列riverの定義。番号は振る必要なく、上から0～5まで自動的に設定される。for文が1から始まるので0は表示されない適当なコメントを入力。
       var river = new Array(
-"日本の川の長さランキング",
-"信濃川",
-"利根川",
-"石狩川",
-"天塩川",
-"北上川"
-);
+        "日本の川の長さランキング",
+        "信濃川",
+        "利根川",
+        "石狩川",
+        "天塩川",
+        "北上川"
+      );
 
 document.write("<table>");
 for ( var i = 1 ; i <= 5 ; i++ ){
