@@ -152,7 +152,7 @@ var ans = new Array(true,false,false,true,true);
 function quiz(){
   var ten = 0; //点数を入れる変数
 
-  //変数iが0~4になるように1ずつ加算。それに合わせて問いと回答の配列をダイアログで表示し、正否がtrueであれば変数tenに20を加算する。
+  //変数iが0~4になるように1ずつ加算。それに合わせて問いをダイアログで表示し同じくiに合わせた回答で正誤判断する。正誤がtrueであれば変数tenに20を加算する。
   for(var i = 0 ; i <= 4 ; i++){
     if( confirm(q[i]) == ans[i] ) ten = ten + 20;
   }
@@ -160,8 +160,13 @@ function quiz(){
   //採点結果発表
   alert("あなたは" + ten + "点でした！");
 }
-
 quiz();
+
+  var str = prompt("お名前を教えて下さい","");
+  if (str == "") str = "名無しの権兵衛";
+  document.write("<center");
+  document.write("ようこそ、<b>" + str +"</b>さん！");
+  document.write("</center>");
     </script>
     <!--<noscript>JavaScriptはOFFです</noscript>-->
 </body>
