@@ -136,7 +136,8 @@ var flg;　//真偽を入れる変数の宣言
 flg = confirm("背景の色を変えてもいいですか？"); //真偽の代入
 if (flg == true) document.bgColor = "orange"; //真なら背景色変更
 
-  //問題を配列に入れる
+
+//問題を配列に入れる
 var q = new Array(
 "水を電気分解すると水素と酸素が出る。",
 "地球上で最も多い元素は炭素である。",
@@ -147,11 +148,11 @@ var q = new Array(
 
 //答え（正誤）を配列に入れる
 var ans = new Array(true,false,false,true,true);
-
+//関数quizの宣言
 function quiz(){
   var ten = 0; //点数を入れる変数
 
-  //５問連続出題
+  //変数iが0~4になるように1ずつ加算。それに合わせて問いと回答の配列をダイアログで表示し、正否がtrueであれば変数tenに20を加算する。
   for(var i = 0 ; i <= 4 ; i++){
     if( confirm(q[i]) == ans[i] ) ten = ten + 20;
   }
