@@ -8,31 +8,35 @@
 
 
         <script>
-            //セレクトボックスに対応するリンク先を配列に入れる
-            var jpURL = new Array(
-                "https://www.pazu.net",
-                "https://www.pazu.net/js/",
-                "https://www.pazu.net/saku2/"
-            );
+           //セレクトボックスに対応するリンク先を配列に入れる
+var jpURL = new Array(
+"https://www.pazru.net/",
+"https://www.pazru.net/js/",
+"https://www.pazru.net/saku2/"
+);
 
-            //リンク先へジャンプさせる関数
-            function selectNavi(){
-                var num;
+//リンク先へジャンプさせる関数
+function selectNavi(){
+  var num;
+  
+  //何番目のoptionが選択されたか調べる
+  num = document.navi.contents.selectedIndex;
 
-                //何番目のoptionが選択されたかを調べる
-                num = document.navi.contents.selectedIndex;
+  //該当するリンク先へジャンプさせる
+  location.href = jpURL[num];
+}
 
-                //該当するリンク先hwジャンプさせる
-                location.href = jpURL[num];
-            }
-        </script>
 
-        <form name="navi">
-            <select name="contents" onchange="selectNavi()">
-                <option>HOME</option>
-                <option>JavaScriot入門</option>
-                <option>HP講座</option>
-            </select>
-        </form>
-    </body>
+    </script>
+    <!--<noscript>JavaScriptはOFFです</noscript>-->
+
+    <form name="navi">
+      <select name="contents" onchange="selectNavi()">
+        <option>HOME</option>
+        <option>JavaScript入門</option>
+        <option>ＨＰ作成講座</option>
+      </select>
+      </form>
+
+</body>
 </html>
