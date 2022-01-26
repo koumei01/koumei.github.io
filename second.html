@@ -26,8 +26,25 @@ function selectNavi(){
   location.href = jpURL[num];
 }
 
+//戻る
+function modoru(){
+  history.back();
+}
+//進む
+function susumu(){
+  history.forward();
+}
+//更新
+function koshin(){
+  location.reload();
+}
 
-    </script>
+</script>
+
+<input type="button"  value="戻る" onclick="modoru()">
+<input type="button"  value="進む" onclick="susumu()">
+<input type="button"  value="更新" onclick="koshin()">
+    
     <!--<noscript>JavaScriptはOFFです</noscript>-->
 
     <form name="navi">
